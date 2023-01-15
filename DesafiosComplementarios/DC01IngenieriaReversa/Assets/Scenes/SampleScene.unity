@@ -816,7 +816,6 @@ GameObject:
   - component: {fileID: 543450652977438686}
   - component: {fileID: 3469287836893810811}
   - component: {fileID: 1711813856389719217}
-  - component: {fileID: 919132148703479141}
   - component: {fileID: 3469287836893810812}
   m_Layer: 0
   m_Name: Canon
@@ -825,21 +824,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &919132148703479141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148703479140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6bd39279d3b1e9439f5e582c70a0862, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootKeyCode: 32
-  bullet: {fileID: 0}
-  pointOfShoot: {fileID: 0}
 --- !u!4 &947975550952158833
 Transform:
   m_ObjectHideFlags: 0
@@ -1231,9 +1215,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6bd39279d3b1e9439f5e582c70a0862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootKeyCode: 32
+  oneShootKeyCode: 32
+  twoShootKeyCode: 106
+  threeShootKeyCode: 107
+  fourShootKeyCode: 108
   bullet: {fileID: 5683240637404387614, guid: db9a110a3b1962f42982fd68c1db03c7, type: 3}
   pointOfShoot: {fileID: 1181486407}
+  additionalWaitingTime: 0
 --- !u!1 &3840272112501149263
 GameObject:
   m_ObjectHideFlags: 0
