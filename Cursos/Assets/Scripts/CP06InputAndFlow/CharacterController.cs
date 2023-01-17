@@ -11,10 +11,13 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private bool isGodMode;
     [SerializeField] private Bullet bulletPrefab;
     [SerializeField] private Transform shootingPoint;
+    [SerializeField] private float shootingTimer;
+    private float _shootingTimerInner;
 
     void Start()
     {
-        ReceiveDamage(damageToTake);
+        // ReceiveDamage(damageToTake);
+        _shootingTimerInner = shootingTimer;
     }
 
     void Update()
@@ -28,7 +31,7 @@ public class CharacterController : MonoBehaviour
             Move(direction);
 
             var shouldShoot = Input.GetKeyDown(KeyCode.Space);
-            if (shouldShoot)
+            if (shouldShoot && _shootingTimerInner <= Time.time)
             {
                 Shoot();
             }
@@ -53,6 +56,7 @@ public class CharacterController : MonoBehaviour
 
     private void Shoot()
     {
+        _shootingTimerInner = shootingTimer + Time.time;
         Instantiate(bulletPrefab, shootingPoint.position, shootingPoint.rotation);
     }
 }
